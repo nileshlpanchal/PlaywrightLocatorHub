@@ -1,0 +1,42 @@
+modules = ["csharp", "dotnet-8", "python-3.11"]
+
+[nix]
+channel = "stable-24_05"
+packages = ["dotnet-sdk_8", "powershell", "chromium"]
+
+[workflows]
+runButton = "Project"
+
+[[workflows.workflow]]
+name = "Project"
+mode = "parallel"
+author = "agent"
+
+[[workflows.workflow.tasks]]
+task = "workflow.run"
+args = "Playwright Framework"
+
+[[workflows.workflow.tasks]]
+task = "workflow.run"
+args = "Test Server"
+
+[[workflows.workflow]]
+name = "Playwright Framework"
+author = "agent"
+
+[[workflows.workflow.tasks]]
+task = "shell.exec"
+args = "dotnet restore && dotnet build && dotnet test --logger \"console;verbosity=detailed\""
+
+[[workflows.workflow]]
+name = "Test Server"
+author = "agent"
+
+[[workflows.workflow.tasks]]
+task = "shell.exec"
+args = "python3 -m http.server 5000"
+waitForPort = 5000
+
+[[ports]]
+localPort = 5000
+externalPort = 80

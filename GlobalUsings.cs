@@ -1,0 +1,10 @@
+global using NUnit.Framework;
+global using Microsoft.Playwright;
+global using Microsoft.Playwright.NUnit;
+global using SpecFlow;
+global using System.Text.Json;
+global using Serilog;
+global using PlaywrightFramework.PageObjects;
+global using PlaywrightFramework.PageObjects.Elements;
+global using PlaywrightFramework.Utilities;
+global using PlaywrightFramework.StepDefinitions;

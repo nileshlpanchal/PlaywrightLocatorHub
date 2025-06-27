@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Test Automation Sample Page</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #f5f5f5;
+        }
+        
+        .form-container {
+            background-color: white;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        
+        .form-group {
+            margin-bottom: 20px;
+        }
+        
+        label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: bold;
+            color: #333;
+        }
+        
+        input[type="text"], input[type="email"], input[type="password"], 
+        input[type="tel"], select, textarea {
+            width: 100%;
+            padding: 10px;
+            border: 2px solid #ddd;
+            border-radius: 5px;
+            font-size: 16px;
+            box-sizing: border-box;
+        }
+        
+        input[type="text"]:focus, input[type="email"]:focus, 
+        input[type="password"]:focus, select:focus, textarea:focus {
+            border-color: #4CAF50;
+            outline: none;
+        }
+        
+        .checkbox-group, .radio-group {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 15px;
+            margin-top: 10px;
+        }
+        
+        .checkbox-item, .radio-item {
+            display: flex;
+            align-items: center;
+            gap: 5px;
+        }
+        
+        input[type="checkbox"], input[type="radio"] {
+            width: auto;
+            margin: 0;
+        }
+        
+        button {
+            background-color: #4CAF50;
+            color: white;
+            padding: 12px 25px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+            margin-right: 10px;
+            margin-top: 10px;
+        }
+        
+        button:hover {
+            background-color: #45a049;
+        }
+        
+        .reset-btn {
+            background-color: #f44336;
+        }
+        
+        .reset-btn:hover {
+            background-color: #da190b;
+        }
+        
+        .success-message {
+            background-color: #d4edda;
+            color: #155724;
+            padding: 15px;
+            border-radius: 5px;
+            margin-top: 20px;
+            display: none;
+        }
+        
+        .advanced-section {
+            margin-top: 30px;
+            padding: 20px;
+            background-color: #f8f9fa;
+            border-radius: 5px;
+            display: none;
+        }
+        
+        h1 {
+            color: #333;
+            text-align: center;
+            margin-bottom: 30px;
+        }
+        
+        h2 {
+            color: #555;
+            border-bottom: 2px solid #4CAF50;
+            padding-bottom: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="form-container">
+        <h1>Test Automation Sample Page</h1>
+        
+        <form id="registrationForm">
+            <h2>Personal Information</h2>
+            
+            <div class="form-group">
+                <label for="firstName">First Name:</label>
+                <input type="text" id="firstName" name="firstName" required>
+            </div>
+            
+            <div class="form-group">
+                <label for="lastName">Last Name:</label>
+                <input type="text" id="lastName" name="lastName" required>
+            </div>
+            
+            <div class="form-group">
+                <label for="email">Email Address:</label>
+                <input type="email" id="email" name="email" placeholder="Enter your email" required>
+            </div>
+            
+            <div class="form-group">
+                <label for="password">Password:</label>
+                <input type="password" id="password" name="password" required>
+            </div>
+            
+            <div class="form-group">
+                <label for="phone">Phone Number:</label>
+                <input type="tel" id="phone" name="phone" placeholder="Enter your phone number">
+            </div>
+            
+            <h2>Gender</h2>
+            <div class="radio-group">
+                <div class="radio-item">
+                    <input type="radio" id="male" name="gender" value="male">
+                    <label for="male">Male</label>
+                </div>
+                <div class="radio-item">
+                    <input type="radio" id="female" name="gender" value="female">
+                    <label for="female">Female</label>
+                </div>
+                <div class="radio-item">
+                    <input type="radio" id="other" name="gender" value="other">
+                    <label for="other">Other</label>
+                </div>
+            </div>
+            
+            <h2>Interests</h2>
+            <div class="checkbox-group">
+                <div class="checkbox-item">
+                    <input type="checkbox" id="sports" name="interests" value="sports">
+                    <label for="sports">Sports</label>
+                </div>
+                <div class="checkbox-item">
+                    <input type="checkbox" id="music" name="interests" value="music">
+                    <label for="music">Music</label>
+                </div>
+                <div class="checkbox-item">
+                    <input type="checkbox" id="reading" name="interests" value="reading">
+                    <label for="reading">Reading</label>
+                </div>
+                <div class="checkbox-item">
+                    <input type="checkbox" id="travel" name="interests" value="travel">
+                    <label for="travel">Travel</label>
+                </div>
+                <div class="checkbox-item">
+                    <input type="checkbox" id="cooking" name="interests" value="cooking">
+                    <label for="cooking">Cooking</label>
+                </div>
+            </div>
+            
+            <h2>Location</h2>
+            
+            <div class="form-group">
+                <label for="country">Country:</label>
+                <select id="country" name="country" required>
+                    <option value="">Select a country</option>
+                    <option value="usa">United States</option>
+                    <option value="canada">Canada</option>
+                    <option value="uk">United Kingdom</option>
+                    <option value="australia">Australia</option>
+                    <option value="germany">Germany</option>
+                    <option value="france">France</option>
+                    <option value="japan">Japan</option>
+                    <option value="india">India</option>
+                </select>
+            </div>
+            
+            <div class="form-group">
+                <label for="city">City:</label>
+                <input type="text" id="city" name="city" list="cities" placeholder="Enter or select your city">
+                <datalist id="cities">
+                    <option value="New York">
+                    <option value="Los Angeles">
+                    <option value="Toronto">
+                    <option value="Vancouver">
+                    <option value="London">
+                    <option value="Manchester">
+                    <option value="Sydney">
+                    <option value="Melbourne">
+                    <option value="Berlin">
+                    <option value="Munich">
+                    <option value="Paris">
+                    <option value="Lyon">
+                    <option value="Tokyo">
+                    <option value="Osaka">
+                    <option value="Mumbai">
+                    <option value="Delhi">
+                </datalist>
+            </div>
+            
+            <h2>Additional Information</h2>
+            
+            <div class="form-group">
+                <label for="profilePicture">Profile Picture:</label>
+                <input type="file" id="profilePicture" name="profilePicture" accept="image/*">
+            </div>
+            
+            <div class="form-group">
+                <label for="bio">Bio:</label>
+                <textarea id="bio" name="bio" rows="4" placeholder="Tell us about yourself"></textarea>
+            </div>
+            
+            <div class="form-group">
+                <button type="submit" id="submitBtn">Submit Registration</button>
+                <button type="button" class="reset-btn" onclick="resetForm()">Reset Form</button>
+                <button type="button" onclick="showAdvancedOptions()">Show Advanced Options</button>
+            </div>
+        </form>
+        
+        <div id="successMessage" class="success-message">
+            <strong>Success!</strong> Registration completed successfully. Thank you for signing up!
+        </div>
+        
+        <div id="advancedSection" class="advanced-section">
+            <h2>Advanced Options</h2>
+            <div class="form-group">
+                <label for="advancedField">Advanced Settings:</label>
+                <input type="text" id="advancedField" name="advancedField" placeholder="Enter advanced configuration">
+            </div>
+            <div class="form-group">
+                <label for="notifications">Notification Preferences:</label>
+                <select id="notifications" name="notifications">
+                    <option value="all">All Notifications</option>
+                    <option value="important">Important Only</option>
+                    <option value="none">No Notifications</option>
+                </select>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Form submission handler
+        document.getElementById('registrationForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            // Simulate form processing
+            setTimeout(function() {
+                document.getElementById('successMessage').style.display = 'block';
+                document.getElementById('successMessage').scrollIntoView({ behavior: 'smooth' });
+            }, 1000);
+        });
+        
+        // Reset form function
+        function resetForm() {
+            document.getElementById('registrationForm').reset();
+            document.getElementById('successMessage').style.display = 'none';
+            document.getElementById('advancedSection').style.display = 'none';
+        }
+        
+        // Show advanced options
+        function showAdvancedOptions() {
+            const advancedSection = document.getElementById('advancedSection');
+            if (advancedSection.style.display === 'none' || advancedSection.style.display === '') {
+                advancedSection.style.display = 'block';
+                advancedSection.scrollIntoView({ behavior: 'smooth' });
+            } else {
+                advancedSection.style.display = 'none';
+            }
+        }
+        
+        // Add some dynamic behavior for testing
+        document.addEventListener('DOMContentLoaded', function() {
+            // Auto-populate city based on country selection
+            document.getElementById('country').addEventListener('change', function() {
+                const cityField = document.getElementById('city');
+                const countryValue = this.value;
+                
+                switch(countryValue) {
+                    case 'usa':
+                        cityField.placeholder = 'e.g., New York, Los Angeles';
+                        break;
+                    case 'canada':
+                        cityField.placeholder = 'e.g., Toronto, Vancouver';
+                        break;
+                    case 'uk':
+                        cityField.placeholder = 'e.g., London, Manchester';
+                        break;
+                    default:
+                        cityField.placeholder = 'Enter or select your city';
+                }
+            });
+            
+            // Form validation feedback
+            const requiredFields = document.querySelectorAll('input[required], select[required]');
+            requiredFields.forEach(field => {
+                field.addEventListener('blur', function() {
+                    if (this.value.trim() === '') {
+                        this.style.borderColor = '#f44336';
+                    } else {
+                        this.style.borderColor = '#4CAF50';
+                    }
+                });
+            });
+        });
+    </script>
+</body>
+</html>
