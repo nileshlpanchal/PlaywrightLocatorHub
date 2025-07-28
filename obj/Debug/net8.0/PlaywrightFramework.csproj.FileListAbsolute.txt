@@ -425,3 +425,4 @@
 /home/runner/workspace/obj/Debug/net8.0/PlaywrightFramework.pdb
 /home/runner/workspace/obj/Debug/net8.0/PlaywrightFramework.genruntimeconfig.cache
 /home/runner/workspace/obj/Debug/net8.0/ref/PlaywrightFramework.dll
+/home/runner/workspace/obj/Debug/net8.0/PlaywrightFramework.sourcelink.json
