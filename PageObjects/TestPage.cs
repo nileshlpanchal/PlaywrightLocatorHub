@@ -1,3 +1,5 @@
+using PlaywrightFramework.PageObjects.AccessibilityTesting;
+
 namespace PlaywrightFramework.PageObjects
 {
     /// <summary>
@@ -7,10 +9,14 @@ namespace PlaywrightFramework.PageObjects
     {
         // Page URL
         private readonly string _baseUrl;
+        
+        // Accessibility testing component
+        public AxeAccessibilityTester AccessibilityTester { get; }
 
         public TestPage(IPage page) : base(page)
         {
             _baseUrl = ConfigReader.GetTestSettings().BaseUrl;
+            AccessibilityTester = new AxeAccessibilityTester(page);
         }
 
         /// <summary>

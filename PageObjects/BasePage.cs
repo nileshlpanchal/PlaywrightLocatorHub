@@ -5,8 +5,8 @@ namespace PlaywrightFramework.PageObjects
     /// </summary>
     public abstract class BasePage
     {
-        protected readonly IPage Page;
-        protected readonly ElementLocators Locators;
+        public readonly IPage Page;
+        public readonly ElementLocators Locators;
         public readonly ElementInteractions Interactions;
         protected readonly WaitHelpers WaitHelpers;
 

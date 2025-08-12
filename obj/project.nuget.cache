@@ -1,10 +1,12 @@
 {
   "version": 2,
-  "dgSpecHash": "iUjgHcTlbxo=",
+  "dgSpecHash": "ooFE6ACU4co=",
   "success": true,
   "projectFilePath": "/home/runner/workspace/PlaywrightFramework.csproj",
   "expectedPackageFiles": [
     "/home/runner/.nuget/packages/bodi/1.5.0/bodi.1.5.0.nupkg.sha512",
+    "/home/runner/.nuget/packages/deque.axecore.commons/4.10.1/deque.axecore.commons.4.10.1.nupkg.sha512",
+    "/home/runner/.nuget/packages/deque.axecore.playwright/4.10.1/deque.axecore.playwright.4.10.1.nupkg.sha512",
     "/home/runner/.nuget/packages/gherkin/19.0.3/gherkin.19.0.3.nupkg.sha512",
     "/home/runner/.nuget/packages/microsoft.bcl.asyncinterfaces/6.0.0/microsoft.bcl.asyncinterfaces.6.0.0.nupkg.sha512",
     "/home/runner/.nuget/packages/microsoft.codecoverage/17.8.0/microsoft.codecoverage.17.8.0.nupkg.sha512",
@@ -68,6 +70,7 @@
     "/home/runner/.nuget/packages/system.globalization.calendars/4.3.0/system.globalization.calendars.4.3.0.nupkg.sha512",
     "/home/runner/.nuget/packages/system.globalization.extensions/4.3.0/system.globalization.extensions.4.3.0.nupkg.sha512",
     "/home/runner/.nuget/packages/system.io/4.3.0/system.io.4.3.0.nupkg.sha512",
+    "/home/runner/.nuget/packages/system.io.abstractions/17.0.24/system.io.abstractions.17.0.24.nupkg.sha512",
     "/home/runner/.nuget/packages/system.io.filesystem/4.3.0/system.io.filesystem.4.3.0.nupkg.sha512",
     "/home/runner/.nuget/packages/system.io.filesystem.primitives/4.3.0/system.io.filesystem.primitives.4.3.0.nupkg.sha512",
     "/home/runner/.nuget/packages/system.linq/4.3.0/system.linq.4.3.0.nupkg.sha512",

@@ -426,3 +426,6 @@
 /home/runner/workspace/obj/Debug/net8.0/PlaywrightFramework.genruntimeconfig.cache
 /home/runner/workspace/obj/Debug/net8.0/ref/PlaywrightFramework.dll
 /home/runner/workspace/obj/Debug/net8.0/PlaywrightFramework.sourcelink.json
+/home/runner/workspace/bin/Debug/net8.0/Deque.AxeCore.Commons.dll
+/home/runner/workspace/bin/Debug/net8.0/Deque.AxeCore.Playwright.dll
+/home/runner/workspace/bin/Debug/net8.0/System.IO.Abstractions.dll

@@ -23,12 +23,14 @@ The architecture promotes code reusability and maintainability by separating ele
 - **TestPage**: Concrete implementation demonstrating framework usage with sample HTML elements
 - **ElementLocators**: Centralized locator strategies for different HTML element types
 - **ElementInteractions**: Reusable interaction methods for web elements
+- **AxeAccessibilityTester**: Comprehensive accessibility testing using Axe-core engine with detailed reporting
 
 ### Test Infrastructure
-- **NUnit Tests**: Traditional unit test approach in `ElementInteractionTests`
-- **SpecFlow BDD**: Behavior-driven tests in `ElementInteraction.feature`
+- **NUnit Tests**: Traditional unit test approach in `ElementInteractionTests` and `AccessibilityTests`
+- **SpecFlow BDD**: Behavior-driven tests in `ElementInteraction.feature` and `AccessibilityTesting.feature`
 - **Test Hooks**: Manages browser lifecycle and test setup/teardown
-- **Step Definitions**: Implements SpecFlow step bindings for BDD scenarios
+- **Step Definitions**: Implements SpecFlow step bindings for BDD scenarios including accessibility testing
+- **Accessibility Testing**: Integrated Axe-core engine for automated accessibility compliance validation
 
 ### Utilities
 - **ConfigReader**: Manages application configuration from `appsettings.json`
@@ -51,6 +53,7 @@ The architecture promotes code reusability and maintainability by separating ele
 - **Microsoft.Playwright**: Browser automation engine
 - **NUnit**: Testing framework for assertions and test management
 - **SpecFlow**: BDD framework for Gherkin feature files
+- **Deque.AxeCore.Playwright**: Accessibility testing engine for WCAG compliance validation
 
 ### Configuration & Logging
 - **Microsoft.Extensions.Configuration**: Configuration management
@@ -86,6 +89,7 @@ The framework is designed for local development and CI/CD integration:
 
 ```
 Changelog:
+- August 12, 2025. Integrated Axe accessibility testing - Added AxeAccessibilityTester class, accessibility step definitions, SpecFlow feature, and NUnit tests for automated WCAG compliance validation and detailed HTML reporting
 - June 27, 2025. Initial setup
 ```
 
